@@ -2,12 +2,11 @@ import cv2 as cv
 import time
 
 
-
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(0)    # connect to capture device
 starting_time = time.time()
 frame_counter = 0
 while True:
-    ret, frame = cap.read()
+    ret, frame = cap.read()     # get a frame from the capture device
     frame_counter += 1
     if ret == False:
         break
